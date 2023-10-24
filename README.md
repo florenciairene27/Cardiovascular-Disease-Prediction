@@ -2,10 +2,11 @@
 
 ## Statistical Modeling 
 
-### Spotify Track Dataset 
+### Project 1 Spotify Track Dataset 
 Using kaggle dataset
 
 ### Alcohol Consumption and Life Expectancy
+
 
 ## Design of Experiment 
 
