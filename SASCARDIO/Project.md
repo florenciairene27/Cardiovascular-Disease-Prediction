@@ -1,5 +1,8 @@
 # CardioSAS: Predictive Modeling for Cardiovascular Disease Risk Assessment
-**Author**: Florencia Irene & Esther Ki
+- **Author**: Florencia Irene & Esther Ki
+- **Tools**: SAS
+- **Code**: [click here](https://github.com/florenciairene27/Irene.github.io/blob/main/SASCARDIO/code.docx)
+
 ## Introduction
 Cardiovascular disease is a disorder that affects the heart and blood vessels. It is the leading cause of death globally, accounting for 31% of all deaths, and 17.7 million people die every year. Common types of CVDs are Coronary Artery Disease, Heart Attack, Storke, and Heart Failure. Since early detection and management are necessary and patients’ awareness of risk factors are important, building a model to predict cardiovascular disease is essential
 
