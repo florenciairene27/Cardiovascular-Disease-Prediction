@@ -69,6 +69,7 @@ The t-test results of the height, weight, and BMI revealed that there was no sig
 ### Training and Test Dataset
 The second research question, "What factors contribute to the presence of heart disease?" will be explored by creating a predictive model.
 Initially, the dataset was divided, allocating 70% for training and 30% for testing. The proportions of each dataset are presented in the SAS output below:
+
 <img width="262" alt="eda22" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/64759ced-403c-45da-be81-98f6b5bbf769">
 
 ### Modeling
@@ -76,6 +77,10 @@ Initially, the dataset was divided, allocating 70% for training and 30% for test
 Utilizing a training dataset, a logistic regression model was trained to address the classification problem at hand. Employing all variables within the dataset, the stepwise selection method was utilized to determine relevant predictors. This iterative approach involved initiating an empty model and selectively adding or removing variables based on their respective p-values. The resulting model encompassed all variables, excluding gender and alcohol, indicating their insignificance as predictors. Furthermore, Glucose 3 and smoking variables presented an unexpected scenario; despite their significant p-values, their coefficients were negative. This unexpected observation seemed to suggest a counterintuitive association wherein individuals with higher glucose levels or those who smoked showed a decreased likelihood of developing heart disease, presenting an intriguing and puzzling aspect that requires further investigation.
 
 <img width="402" alt="eda22" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/47d3fc48-56d5-47f9-8758-6f7403af8026">
+
+Upon assessing the model's performance, an evaluation was conducted using a confusion matrix to measure its predictive capability. An accuracy rate of 72.65% was observed in the model. However, concerns were raised regarding the reliability of estimates associated with Glucose and smoking variables, potentially influencing the model's implications. This prompted the identification of a potential issue: multicollinearity. Suspicions were raised about the potential correlation between smoke and glucose, as well as their possible correlations with other categorical predictors, contributing to this discrepancy. To address this concern, let's explore the potential correlations among variables to mitigate the impact of multicollinearity on the model's estimation and interpretation.
+
+<img width="456" alt="eda24" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/0167f8d9-c571-4c5f-965c-a8a2b24d8500">
 
 
 
