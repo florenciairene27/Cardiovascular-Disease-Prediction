@@ -35,6 +35,26 @@ Cardiovascular disease is a disorder that affects the heart and blood vessels. I
 
 In the initial exploratory data analysis (EDA) focusing on categorical variables, it was observed that the gender ratio is similar in the heart disease group and no disease group. There are definitely more people with higher cholesterol in the heart disease group (as you can see the blue is normal and the red and green are high cholesterol groups). On the other hand, minimal visual differences were noted in the distribution of glucose levels, smoking habits, and physical activity between individuals with and without heart disease, suggesting less distinct variations in these factors among the groups.
 
+![eda7](https://github.com/florenciairene27/Irene.github.io/assets/112704355/f0246988-ab6c-47e3-a984-4f862ae0193e) ![eda8](https://github.com/florenciairene27/Irene.github.io/assets/112704355/349c79d5-fbca-4335-9d41-0351e8c86e8f) ![eda9](https://github.com/florenciairene27/Irene.github.io/assets/112704355/110ad4a1-7c02-440f-986e-432831e5a6cc) <img width="237" alt="eda10" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/446370b0-7315-42d0-b0cf-6c7e679192fa">
+
+Box plots were generated to explore the numerical variables. In the heart disease group, higher mean ages were observed, along with higher mean values for both systolic and diastolic blood pressure.
+
+![eda11](https://github.com/florenciairene27/Irene.github.io/assets/112704355/6595fa66-114e-4742-8d61-9a250df59fc7) ![eda12](https://github.com/florenciairene27/Irene.github.io/assets/112704355/256822e4-a3ca-4a13-8edd-56b494c2207f)
+<img width="401" alt="eda13" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/5a2e5ff5-7ea6-4204-8b8b-eaebde5c9d0c">
+
+For the height, the distribution looks pretty much similar between the heart disease group and no disease group with similar means, but the heart disease group has higher mean weight. 
+
+![eda14](https://github.com/florenciairene27/Irene.github.io/assets/112704355/ca2fbc3f-96c4-407c-8017-933b928e9bd8) 
+![eda16](https://github.com/florenciairene27/Irene.github.io/assets/112704355/00b93dfa-21e9-43c8-a324-731920ecd1fa)
+![eda17](https://github.com/florenciairene27/Irene.github.io/assets/112704355/0164cb97-adda-4dd1-a3a6-e52abc3d6246)
+![eda18](https://github.com/florenciairene27/Irene.github.io/assets/112704355/2e2856de-8c35-47a3-ac74-0caef0ed9d37)
+
+A correlation matrix was also generated, revealing significant correlations among the variables of height, weight, and age, which was an anticipated outcome. Consequently, a new variable, BMI (Body Mass Index), was created, calculated as an individual’s weight in kilograms divided by the square of their height in meters. This combined variable was then assessed to determine its potential to replace height and weight, thereby reducing redundancy.
+
+
+
+
+
 
 
 
