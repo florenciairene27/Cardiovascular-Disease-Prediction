@@ -78,9 +78,54 @@ Utilizing a training dataset, a logistic regression model was trained to address
 
 <img width="402" alt="eda22" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/47d3fc48-56d5-47f9-8758-6f7403af8026">
 
-Upon assessing the model's performance, an evaluation was conducted using a confusion matrix to measure its predictive capability. An accuracy rate of 72.65% was observed in the model. However, concerns were raised regarding the reliability of estimates associated with Glucose and smoking variables, potentially influencing the model's implications. This prompted the identification of a potential issue: multicollinearity. Suspicions were raised about the potential correlation between smoke and glucose, as well as their possible correlations with other categorical predictors, contributing to this discrepancy. To address this concern, let's explore the potential correlations among variables to mitigate the impact of multicollinearity on the model's estimation and interpretation.
+Upon assessing the model's performance, an evaluation was conducted using a confusion matrix to measure its predictive capability. An accuracy rate of 72.65% was observed in the model. However, concerns were raised regarding the reliability of estimates associated with Glucose and smoking variables, potentially influencing the model's implications. This prompted the identification of a potential issue: multicollinearity. Suspicions were raised about the potential correlation between smoke and glucose, as well as their possible correlations with other categorical predictors, contributing to this discrepancy. To address this concern, let's explore the potential correlations among variables using chi-square test.
 
 <img width="456" alt="eda24" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/0167f8d9-c571-4c5f-965c-a8a2b24d8500">
+
+The chi-square tests were performed between all pairs of categorical variables, revealing an association between cholesterol and both glucose and smoke. A decision was made to attempt the removal of glucose and smoke from the model to ascertain if there would be an improvement in accuracy.
+
+<img width="515" alt="eda25" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/ed618c9e-ac8e-4c8d-a815-ab6f1c1baa67">
+
+The model was then refitted, this time excluding glucose and smoke. The SAS output below displays the estimates of the parameters, revealing significance across all variables, which supports the previous decision.
+
+<img width="251" alt="eda26" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/734c8ae7-6143-4ff2-b70c-f7690771701b">
+
+For further validation of the decision, an accuracy check was performed on the new model. The accuracy of the new model was measured at 72.30%, indicating a slight decrease. This minor decline in accuracy supports the decision to eliminate these two variables, as their removal only minimally impacts the model's performance. Subsequently, the new model was tested on the testing dataset, revealing that the accuracy remained stable, with a slight improvement.
+
+<img width="449" alt="eda26" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/527b4654-a920-46c7-9330-28a05e208563">
+
+The Final model and the interpretation are shown in the picture below:
+<img width="471" alt="eda27" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/e03da1c5-e50d-4566-b3b0-7591964952fc">
+
+### Variable Importance 
+
+"Standardized coefficients are coefficients adjusted so that they may be interpreted as having the same, standardized scale and the magnitude of the coefficients can be directly compared (ranked)." (Menard S. 2004)
+According to Menard, if coefficients are standardized we can compare the magnitude of it or it means larger absolute value of standardize coeff suggests a more important predictors in terms of it impact on the outcome variable. Based on the model coefficients, here's the variable important rank :
+
+<img width="227" alt="eda28" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/ea9a0d05-9790-47b8-a401-f3b3108e1cc1">
+
+## Conclusions
+
+In conclusion, the analysis highlighted a significant link between BMI and heart disease, showcasing a distinct difference in BMI values between those with and without the condition. The logistic regression model demonstrated strong performance, accurately predicting heart disease with an impressive 73.23% success rate. Key factors like Ap_hi, age, cholesterol, BMI, Ap_lo, and physical activity emerged as crucial contributors to the likelihood of developing heart disease. These findings shed light on important aspects to consider when understanding how certain factors may predict this medical condition, providing valuable insights for future research and clinical evaluations.
+
+## Limitation
+
+One of the limitation in this study is the nearly equal distribution between individuals with and without heart disease in the dataset, which doesn't entirely mirror the real-world scenario. This poses a challenge when attempting to generalize the analysis and its implications to real-world situations. Additionally, models trained on balanced data might not effectively handle imbalanced data, potentially struggling to make accurate predictions for minority classes. 
+
+Furthermore, relying solely on accuracy as a metric to evaluate the model presents another limitation. Accuracy tends to emphasize the majority classes, with the dominant class significantly impacting the overall accuracy score. This can be problematic, particularly when the focus is on rare classes, as missing even a few cases can have substantial consequences, highlighting the need for additional evaluation metrics beyond accuracy in such scenarios
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
