@@ -1,5 +1,5 @@
 # CardioSAS: Predictive Modeling for Cardiovascular Disease Risk Assessment
-
+**Author**: Florencia Irene & Esther Ki
 ## Introduction
 Cardiovascular disease is a disorder that affects the heart and blood vessels. It is the leading cause of death globally, accounting for 31% of all deaths, and 17.7 million people die every year. Common types of CVDs are Coronary Artery Disease, Heart Attack, Storke, and Heart Failure. Since early detection and management are necessary and patients’ awareness of risk factors are important, building a model to predict cardiovascular disease is essential
 
@@ -95,6 +95,7 @@ For further validation of the decision, an accuracy check was performed on the n
 <img width="449" alt="eda26" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/527b4654-a920-46c7-9330-28a05e208563">
 
 The Final model and the interpretation are shown in the picture below:
+
 <img width="471" alt="eda27" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/e03da1c5-e50d-4566-b3b0-7591964952fc">
 
 ### Variable Importance 
@@ -104,7 +105,7 @@ According to Menard, if coefficients are standardized we can compare the magnitu
 
 <img width="227" alt="eda28" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/ea9a0d05-9790-47b8-a401-f3b3108e1cc1">
 
-## Conclusions
+## Conclusion
 
 In conclusion, the analysis highlighted a significant link between BMI and heart disease, showcasing a distinct difference in BMI values between those with and without the condition. The logistic regression model demonstrated strong performance, accurately predicting heart disease with an impressive 73.23% success rate. Key factors like Ap_hi, age, cholesterol, BMI, Ap_lo, and physical activity emerged as crucial contributors to the likelihood of developing heart disease. These findings shed light on important aspects to consider when understanding how certain factors may predict this medical condition, providing valuable insights for future research and clinical evaluations.
 
