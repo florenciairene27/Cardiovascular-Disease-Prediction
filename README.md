@@ -1,11 +1,15 @@
 # Selected Projects in Data Analysis
 
 ## About
-Greetings! I am a driven graduate student at California State University East Bay, majoring in Statistics with a passion for data analysis. With a robust foundation built over two years as a Business Analyst, I have honed my skills in extracting actionable insights from complex datasets. My journey embodies a commitment to unraveling the stories within data, employing statistical methodologies to drive informed decision-making. Through this repository, I aim to showcase my proficiency, share my projects, and track my journey in Data analysis and Data science. 
+
+Hello! I'm a dedicated graduate student at California State University East Bay, specializing in Statistics and deeply passionate about data analysis. Having spent two years as a Business Analyst, I've developed strong expertise in extracting valuable insights from intricate datasets. My journey reflects a dedication to uncovering narratives hidden within data, using statistical approaches to steer informed decision-making. Through this portfolio, I aim to demonstrate my skills, exhibit my projects, and document my progress in the realms of Data Analysis and Data Science.
 
 ## Projects
-### CardioSAS: Predictive Modeling for Cardiovascular Disease Risk Assessment 
-**Description**: Developed a SAS-based predictive model using electronic medical records for cardiovascular disease risk assessment. Conducted extensive exploratory data analysis, delineating crucial disparities in BMI, weight, and cholesterol levels between heart disease and non-disease groups. Utilized statistical methods (t-tests, chi-square tests, logistic regression) to refine the model, achieving 72.30% accuracy by addressing variable issues. Identified pivotal predictors for heart disease risk, highlighting the significance of nuanced model evaluation beyond accuracy.
-###
+### [CardioSAS: Predictive Modeling for Cardiovascular Disease Risk Assessment](https://github.com/florenciairene27/Irene.github.io/blob/main/SASCARDIO/Project.md)
+**Description**: This project aimed to create a predictive model using SAS and electronic medical records for assessing cardiovascular disease risk. Through extensive data analysis, significant differences in BMI, weight, and cholesterol levels were identified between individuals with and without heart disease. Statistical methods such as t-tests, chi-square tests, and logistic regression were utilized to build the predictive model and enhance it, resulting in final accuracy of 73.24%. Furthermore, this study also indentified key predictors influencing heart disease and the importance of comprehensive model evaluation beyond mere accuracy metrics
+**Tool**: SAS 
+
+
+### 
 
 ### Heart Disease Prediction
