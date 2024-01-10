@@ -1,5 +1,5 @@
 # CardioSAS: Predictive Modeling for Cardiovascular Disease Risk Assessment
-- **Author**: Florencia Irene & Esther Ki
+- **Authors**: Florencia Irene & Esther Ki
 - **Tools**: SAS
 - **Code**: [click here](https://github.com/florenciairene27/Irene.github.io/blob/main/SASCARDIO/code.docx)
 
@@ -62,62 +62,62 @@ A correlation matrix was also generated, revealing significant correlations amon
 2. What factors contribute to the presence of cardiovascular disease? 
 - Build a model to assess individual’s risk of cardiovascular disease 
 
-## Results
+## Analysis
 
 ### Statistical Test
+To answer the first research question, t-tests were performed. Below is the hypothesis :
+
+<img width="177" alt="29" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/c7b6053b-56e7-4501-8123-441321e11487">
+
+This hypothesis was used to test the difference in mean between disease and no disease groups for weight, height and BMI. 
+
 The t-test results of the height, weight, and BMI revealed that there was no significant difference observed in the mean height between the heart disease group and the non-disease group. However, a notable discrepancy was identified in the mean weight and mean BMI, aligning with our expectations derived from the exploratory data analysis (EDA). In medical contexts, BMI is often regarded as a more crucial variable than height and weight due to its standardized approach in assessing overall body composition. Consequently, the decision was made to replace the height and weight variables with BMI to reduce redundancy while retaining all information from the original dataset.
 
 <img width="549" alt="eda19" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/cc074c1e-c2b7-422b-b729-933df94a0955">
 
 ### Training and Test Dataset
-The second research question, "What factors contribute to the presence of heart disease?" will be explored by creating a predictive model.
+The second research question will be explored by creating a predictive model.
 Initially, the dataset was divided, allocating 70% for training and 30% for testing. The proportions of each dataset are presented in the SAS output below:
 
 <img width="262" alt="eda22" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/64759ced-403c-45da-be81-98f6b5bbf769">
 
 ### Modeling
-
-Utilizing a training dataset, a logistic regression model was trained to address the classification problem at hand. Employing all variables within the dataset, the stepwise selection method was utilized to determine relevant predictors. This iterative approach involved initiating an empty model and selectively adding or removing variables based on their respective p-values. The resulting model encompassed all variables, excluding gender and alcohol, indicating their insignificance as predictors. Furthermore, Glucose 3 and smoking variables presented an unexpected scenario; despite their significant p-values, their coefficients were negative. This unexpected observation seemed to suggest a counterintuitive association wherein individuals with higher glucose levels or those who smoked showed a decreased likelihood of developing heart disease, presenting an intriguing and puzzling aspect that requires further investigation.
+Utilizing a training dataset, a logistic regression model was trained to address the classification problem at hand. Using all variables within the dataset, the stepwise selection method was utilized to determine relevant predictors. This iterative approach involved initiating an empty model and selectively adding or removing variables based on their respective p-values. The resulting model encompassed all variables, excluding gender and alcohol, indicating their insignificance as predictors. Furthermore, Glucose 3 and smoking variables presented an unexpected scenario; despite their significant p-values, their coefficients were negative. This unexpected observation seemed to suggest a counterintuitive association wherein individuals with higher glucose levels or those who smoked showed a decreased likelihood of developing heart disease, presenting an intriguing and puzzling aspect that requires further investigation.
 
 <img width="402" alt="eda22" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/47d3fc48-56d5-47f9-8758-6f7403af8026">
 
-Upon assessing the model's performance, an evaluation was conducted using a confusion matrix to measure its predictive capability. An accuracy rate of 72.65% was observed in the model. However, concerns were raised regarding the reliability of estimates associated with Glucose and smoking variables, potentially influencing the model's implications. This prompted the identification of a potential issue: multicollinearity. Suspicions were raised about the potential correlation between smoke and glucose, as well as their possible correlations with other categorical predictors, contributing to this discrepancy. To address this concern, let's explore the potential correlations among variables using chi-square test.
+Upon assessing the model's performance, an evaluation was conducted using a confusion matrix; an accuracy rate of 72.65% was observed. However, as mentioned before, concerns were raised regarding the reliability of estimates associated with Glucose 3 and smoking variables. This made us realize there might be a problem with multicollinearity as we intuitively believed that smoke and glucose might be connected with eachother and possibly other categorical factors. To check this, let's investigate the possible connections between these categorical variables (Cholesterol & Glucose, Cholesterol & Smoke, Smoke & Gender) using chi-square test of independence: 
 
-<img width="456" alt="eda24" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/0167f8d9-c571-4c5f-965c-a8a2b24d8500">
+<img width="223" alt="30" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/62143c88-1c5d-4dbe-b4b8-f4401d830706"> <img width="247" alt="31" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/076c7cbf-97ee-4504-b899-33336ee0dde5"> <img width="312" alt="32" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/eb3b3e7e-88d9-47c9-b347-ffeaefec0bd7">
 
-The chi-square tests were performed between all pairs of categorical variables, revealing an association between cholesterol and both glucose and smoke. A decision was made to attempt the removal of glucose and smoke from the model to ascertain if there would be an improvement in accuracy.
-
-<img width="515" alt="eda25" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/ed618c9e-ac8e-4c8d-a815-ab6f1c1baa67">
-
-The model was then refitted, this time excluding glucose and smoke. The SAS output below displays the estimates of the parameters, revealing significance across all variables, which supports the previous decision.
+The chi-square tests revealed an association between both glucose and smoke with cholesterol, as the p-value < 0.05. So we made a decision to try dropping glucose and smoke from the model and see if the accuracy improves. Next, The model was then refitted, this time excluding glucose and smoke. The SAS output below displays the estimates of the parameters, revealing significance across all variables, which supports the decision to drop the variables.
 
 <img width="251" alt="eda26" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/734c8ae7-6143-4ff2-b70c-f7690771701b">
 
-For further validation of the decision, an accuracy check was performed on the new model. The accuracy of the new model was measured at 72.30%, indicating a slight decrease. This minor decline in accuracy supports the decision to eliminate these two variables, as their removal only minimally impacts the model's performance. Subsequently, the new model was tested on the testing dataset, revealing that the accuracy remained stable, with a slight improvement.
+To ensure the decision was right, we double-checked the new model's accuracy. The accuracy of this updated model was found to be 72.30%, showing a small decrease compared to before. This slight drop supports our choice to remove those two variables because their exclusion doesn't significantly affect how well the model works. Afterward, we put the new model to the test using another dataset, and it turns out that the accuracy stayed consistent with a slight improvement.
 
 <img width="449" alt="eda26" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/527b4654-a920-46c7-9330-28a05e208563">
 
-The Final model and the interpretation are shown in the picture below:
+The Final model and the interpretations of the model in terms of odds ratio are shown in the picture below:
 
 <img width="471" alt="eda27" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/e03da1c5-e50d-4566-b3b0-7591964952fc">
 
 ### Variable Importance 
 
-"Standardized coefficients are coefficients adjusted so that they may be interpreted as having the same, standardized scale and the magnitude of the coefficients can be directly compared (ranked)." (Menard S. 2004)
-According to Menard, if coefficients are standardized we can compare the magnitude of it or it means larger absolute value of standardize coeff suggests a more important predictors in terms of it impact on the outcome variable. Based on the model coefficients, here's the variable important rank :
+*"Standardized coefficients are coefficients that have been adjusted to be measured on the same scale. This adjustment allows for a direct comparison of the coefficients' sizes, making it easier to determine their importance and compare their impacts on the outcome variable." - Menard, 2004*
+
+According to Menard, when coefficients are standardized, comparing their magnitudes becomes feasible. A larger absolute value of a standardized coefficient indicates a more significant predictor in terms of its impact on the outcome variable. Based on the model coefficients, here is the ranking of variable importance:
 
 <img width="227" alt="eda28" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/ea9a0d05-9790-47b8-a401-f3b3108e1cc1">
 
 ## Conclusion
-
-In conclusion, the analysis highlighted a significant link between BMI and heart disease, showcasing a distinct difference in BMI values between those with and without the condition. The logistic regression model demonstrated strong performance, accurately predicting heart disease with an impressive 73.23% success rate. Key factors like Ap_hi, age, cholesterol, BMI, Ap_lo, and physical activity emerged as crucial contributors to the likelihood of developing heart disease. These findings shed light on important aspects to consider when understanding how certain factors may predict this medical condition, providing valuable insights for future research and clinical evaluations.
+In summary, after examining the data, significant connection between BMI and heart disease was found. This highlighted a clear difference in BMI values between those who had the condition and those who didn’t. The model we used to predict heart disease performed quite well, accurately guessing the presence of the disease in individuals with a success rate of 73.23%. Key factors like Ap_hi, age, cholesterol, BMI, Ap_lo, and physical activity turned out to be crucial in determining the chances of developing heart disease. These findings offer valuable insights into how certain factors can predict this medical condition, which could be essential for future research and medical evaluations.
 
 ## Limitation
 
-One of the limitation in this study is the nearly equal distribution between individuals with and without heart disease in the dataset, which doesn't entirely mirror the real-world scenario. This poses a challenge when attempting to generalize the analysis and its implications to real-world situations. Additionally, models trained on balanced data might not effectively handle imbalanced data, potentially struggling to make accurate predictions for minority classes. 
+One limitation in this study is the dataset having almost an equal number of people with and without heart disease. This doesn't quite match what happens in the real world, making it tricky to apply our findings universally. Also, models trained on this balanced data might not accurately predict less common occurrences.
 
-Furthermore, relying solely on accuracy as a metric to evaluate the model presents another limitation. Accuracy tends to emphasize the majority classes, with the dominant class significantly impacting the overall accuracy score. This can be problematic, particularly when the focus is on rare classes, as missing even a few cases can have substantial consequences, highlighting the need for additional evaluation metrics beyond accuracy in such scenarios
-
+Moreover, relying only on accuracy to judge the model has its limitations. Accuracy tends to favor the bigger groups, impacting the overall score. This becomes an issue when focusing on rare cases. Missing a few of these cases can be crucial, emphasizing the necessity for other evaluation methods alongside accuracy in such cases.
 
 
 
