@@ -1,6 +1,6 @@
 # CardioSAS: Predictive Modeling for Cardiovascular Disease Risk Assessment
 - **Authors**: Florencia Irene & Esther Ki
-- **Tools**: SAS
+- **Tool**: SAS
 - **Code**: [click here](https://github.com/florenciairene27/Irene.github.io/blob/main/SASCARDIO/code.docx)
 
 ## Introduction
@@ -118,6 +118,17 @@ In summary, after examining the data, significant connection between BMI and hea
 One limitation in this study is the dataset having almost an equal number of people with and without heart disease. This doesn't quite match what happens in the real world, making it tricky to apply our findings universally. Also, models trained on this balanced data might not accurately predict less common occurrences.
 
 Moreover, relying only on accuracy to judge the model has its limitations. Accuracy tends to favor the bigger groups, impacting the overall score. This becomes an issue when focusing on rare cases. Missing a few of these cases can be crucial, emphasizing the necessity for other evaluation methods alongside accuracy in such cases.
+
+## Recommendation
+One of the way to improve the model performance is by adding interaction term. Below is the model estimations and accuracy after adding interaction term to the model:
+
+<img width="232" alt="33" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/a77f8fc6-2778-41e7-a10f-330b77150a18"> <img width="258" alt="34" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/cf64588d-2d72-4edf-a24f-9d0b5e545254"> <img width="149" alt="35" src="https://github.com/florenciairene27/Irene.github.io/assets/112704355/2942b4a5-6c54-4082-afee-169a97a4f2a3">
+
+As we can see on the SAS ouput above, there is a little improvement on model accuracy.
+
+Furthermore building other classification models is also recommended to add more depth into this study. 
+
+
 
 
 
