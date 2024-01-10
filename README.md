@@ -11,7 +11,4 @@ Hello! I'm a dedicated graduate student at California State University East Bay,
 
 **Description**: This project aimed to create a predictive model using SAS and electronic medical records for assessing cardiovascular disease risk. Through extensive data analysis, significant differences in BMI, weight, and cholesterol levels were identified between individuals with and without heart disease. Statistical methods such as t-tests, chi-square tests, and logistic regression were utilized to build the predictive model and enhance it, resulting in final accuracy of 73.24%. Furthermore, this study also indentified key predictors influencing heart disease and the importance of comprehensive model evaluation beyond mere accuracy metrics
 
-
-### 
-
-### Heart Disease Prediction
+### R based Longitudinal Assessment of Bone Strength Variability Over Time 
