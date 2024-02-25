@@ -7,8 +7,12 @@ Hello! I'm a dedicated graduate student at California State University East Bay,
 ## Projects
 ### [CardioSAS: Predictive Modeling for Cardiovascular Disease Risk Assessment](https://github.com/florenciairene27/Irene.github.io/blob/main/SASCARDIO/Project.md)
 
-**Tool**: SAS 
+**Tool**: R 
 
 **Description**: This project aimed to create a predictive model using SAS and electronic medical records for assessing cardiovascular disease risk. Through extensive data analysis, significant differences in BMI, weight, and cholesterol levels were identified between individuals with and without heart disease. Statistical methods such as t-tests, chi-square tests, and logistic regression were utilized to build the predictive model and enhance it, resulting in final accuracy of 73.24%. Furthermore, this study also indentified key predictors influencing heart disease and the importance of comprehensive model evaluation beyond mere accuracy metrics
 
-### R based Longitudinal Assessment of Bone Strength Variability Over Time 
+### Predicting Song Popularity
+
+**Tool**: SAS
+
+**Description**: In this project, we utilized Spotify's extensive track dataset and R programming to develop predictive models for song popularity. Employing multiple linear regression, LASSO, and random forest algorithms, we refined accuracy predictions while addressing challenges like multicollinearity and temporal bias in popularity measurements. Our analysis identified key genre predictors influencing song popularity, providing valuable insights into music trends and optimal song characteristics. By tackling these challenges and providing actionable insights, we've contributed to a deeper understanding of consumer preferences within the music industry, guiding strategic decision-making processes for artists, record labels, and streaming platforms.
